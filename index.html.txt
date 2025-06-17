@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day 7 Assignment</title>
+</head>
+<body>
+
+  <!-- Task 1 -->
+  <h1 id="mainHeading">Welcome</h1>
+  <p id="mainPara">Click the button to change this text.</p>
+  <button id="changeTextBtn">Click Me</button>
+
+  <!-- Task 2 -->
+  <hr>
+  <input type="text" id="nameInput" placeholder="Enter your name">
+  <button id="submitBtn">Submit</button>
+  <p id="welcomeMessage"></p>
+
+  <!-- Task 3 -->
+  <hr>
+  <button id="bgBtn">Change Background</button>
+
+  <!-- Task 4 -->
+  <hr>
+  <h2>To-Do List</h2>
+  <input type="text" id="taskInput" placeholder="New task">
+  <button id="addTaskBtn">Add</button>
+  <ul id="taskList"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>

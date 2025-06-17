@@ -1,0 +1,38 @@
+// Task 1: Change text on button click
+document.getElementById("changeTextBtn").addEventListener("click", function() {
+  document.getElementById("mainHeading").textContent = "Hello from DOM!";
+  document.querySelector("#mainPara").textContent = "The text has been changed!";
+});
+
+// Task 2: Show welcome message with user's name
+document.getElementById("submitBtn").addEventListener("click", function() {
+  const name = document.getElementById("nameInput").value;
+  document.getElementById("welcomeMessage").textContent = `Welcome, ${name}!`;
+});
+
+// Task 3: Change background to random color
+document.getElementById("bgBtn").addEventListener("click", function() {
+  const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+  document.body.style.backgroundColor = randomColor;
+});
+
+// Task 4: To-Do List functionality
+document.getElementById("addTaskBtn").addEventListener("click", function() {
+  const taskText = document.getElementById("taskInput").value;
+  if (taskText.trim() !== "") {
+    const li = document.createElement("li");
+    li.textContent = taskText;
+
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "Delete";
+    delBtn.style.marginLeft = "10px";
+
+    delBtn.addEventListener("click", function() {
+      li.remove();
+    });
+
+    li.appendChild(delBtn);
+    document.getElementById("taskList").appendChild(li);
+    document.getElementById("taskInput").value = ""; // clear input
+  }
+});
